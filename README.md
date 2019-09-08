@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Steps to deploy Angular App on Nginx with Docker Container
+
+1) Install docker on local machine follow the below article
+    (https://docs.docker.com/docker-for-windows/install/)
+
+2) After successfully installation check docker version using `docker --version`
+
+3) Clone the project and Build docker image from .Dockerfile 
+    `docker build -t docker-angular .`
+4) After successfully build see the created image
+    `docker images`
+5) Run the docker image.
+    `docker run --rm -d -p 80:80/tcp docker-angular`
+
+6) Test the appliation on browser (http://localhost)
+
+
